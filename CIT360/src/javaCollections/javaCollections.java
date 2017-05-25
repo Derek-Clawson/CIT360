@@ -14,7 +14,7 @@ public class javaCollections {
 	}
 
 	
-	/* This function creates a MAP object of car brands and their count */
+
 	public static void Map() {
 		
 		Map<String, String> myMap = new HashMap<String, String>();
@@ -27,11 +27,11 @@ public class javaCollections {
 		System.out.println("Car Names (using a HashMap)");
 		System.out.println("\t" + myMap);
 		
-		/* remove deletes the item */
+	
 		myMap.remove("Kia");
 		System.out.println("\t" + myMap);
 		
-		/* put enables you to add to the list or change the value */
+	
 		myMap.put("Lemons", "20");
 		System.out.println("\t" + myMap);
 		
@@ -39,7 +39,6 @@ public class javaCollections {
 
 	}
 	
-	/* this Function creates a list of girls names */
 	public static void List() {
 		List<Object> myList = new ArrayList<>();
 		myList.add("Hannah");
@@ -56,8 +55,8 @@ public class javaCollections {
 		System.out.println("Added the name Carissa");
 		System.out.println("\t" + myList);
 		
-		myList.remove("Kaylee");
-		System.out.println("Subtracted the name Kaylee");
+		myList.remove("Bob");
+		System.out.println("Subtracted the name Bob");
 		System.out.println("\t" + myList);
 		
 		Iterator<Object> iterator = myList.iterator();
@@ -67,7 +66,7 @@ public class javaCollections {
 		}
 	}
 	
-	/* This Method creates a SET */
+	
 	public static void Set() {
 		Set<String> mySet = new LinkedHashSet<String>();
 		mySet.add("Goblet of Fire");
@@ -80,7 +79,7 @@ public class javaCollections {
 		System.out.println("Harry Potter Books (using a SET)");
 		System.out.println("\t" + mySet);
 		
-		System.out.println("removed Goblet of Fire");
+		System.out.println("Removed Goblet of Fire");
 		mySet.remove("Goblet of Fire");
 		System.out.println("\t" + mySet);
 		
@@ -102,7 +101,7 @@ public class javaCollections {
 		myTree.add("Mars");
 		myTree.add("Crunch");
 		System.out.println();
-		System.out.println("Some yummy candy bars!");
+		System.out.println("Some candy bars!");
 		System.out.println("\t" + myTree);
 	}
 }
