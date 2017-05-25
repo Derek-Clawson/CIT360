@@ -6,16 +6,16 @@ public class javaCollections {
 	public static void main(String[] args) {
 		
 		
-		happyMap();
-		happyList();
-		happySet();
-		happyTree();
+		Map();
+		List();
+		Set();
+		Tree();
 		
 	}
 
 	
 	/* This function creates a MAP object of car brands and their count */
-	public static void happyMap() {
+	public static void Map() {
 		
 		Map<String, String> myMap = new HashMap<String, String>();
 		myMap.put("BMW", "1");
@@ -24,7 +24,7 @@ public class javaCollections {
 		myMap.put("Toyota", "4");
 		myMap.put("Kia", "5");
 		myMap.put("Hyundai", "6");
-		System.out.println("I like these brand names! (using a HashMap)");
+		System.out.println("Car Names (using a HashMap)");
 		System.out.println("\t" + myMap);
 		
 		/* remove deletes the item */
@@ -40,16 +40,16 @@ public class javaCollections {
 	}
 	
 	/* this Function creates a list of girls names */
-	public static void happyList() {
+	public static void List() {
 		List<Object> myList = new ArrayList<>();
 		myList.add("Hannah");
-		myList.add("Sailor");
+		myList.add("Bob");
 		myList.add("Kaylee");
-		myList.add("Mary");
+		myList.add("Bill");
 		myList.add("Beth");
-		myList.add("Christina");
+		myList.add("Joe");
 		System.out.println();
-		System.out.println("These are some pretty GIRL names! (Using an ArrayList)");
+		System.out.println("These are some names! (Using an ArrayList)");
 		System.out.println("\t" + myList);
 		
 		myList.add("Carissa");
@@ -68,7 +68,7 @@ public class javaCollections {
 	}
 	
 	/* This Method creates a SET */
-	public static void happySet() {
+	public static void Set() {
 		Set<String> mySet = new LinkedHashSet<String>();
 		mySet.add("Goblet of Fire");
 		mySet.add("Prisoner of Azkaban");
@@ -94,7 +94,7 @@ public class javaCollections {
 			System.out.println(myString);
 		}
 	}
-	public static void happyTree() {
+	public static void Tree() {
 		TreeSet<String> myTree = new TreeSet<String>();
 		myTree.add("Snickers");
 		myTree.add("Milky-Way");
