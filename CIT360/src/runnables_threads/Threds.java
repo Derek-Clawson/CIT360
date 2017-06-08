@@ -3,20 +3,19 @@ package runnables_threads;
 public class Threds implements Runnable {
 
 	private Thread first;
-	private String newName;
+	private String name;
 	
-	// Default Constructor
-	Threds(String name) {
-		newName = name;
-		System.out.println("Created " + newName);
+	Threds(String name1) {
+		name = name1;
+		System.out.println("Created " + name);
 	                 
 	}
 	public void run() {
-		System.out.println("Running " + newName);
+		System.out.println("Running " + name);
 		
 		try {
 			for(int i =7; i>0; i--){
-				System.out.println(newName + " will die in " + i);
+				System.out.println(name + " will sleep in " + i);
 				Thread.sleep(500);
 			                       }
 		    }
@@ -27,9 +26,9 @@ public class Threds implements Runnable {
 	                  }
 	
 	public void start () {
-        System.out.println("Starting " +  newName );
+        System.out.println("Starting " +  name );
         if (first == null) {
-            first = new Thread (this, newName);
+            first = new Thread (this, name);
             first.start ();
         }
 	}
