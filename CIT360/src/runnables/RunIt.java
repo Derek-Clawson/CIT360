@@ -1,4 +1,4 @@
-package exicutables;
+package runnables;
 
 public class RunIt {
 	
