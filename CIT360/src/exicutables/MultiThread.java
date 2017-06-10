@@ -3,15 +3,15 @@ package exicutables;
 public class MultiThread implements Runnable {
 
 	
-	private String threadNumber;
+	private String tNumber;
 	
 	public MultiThread(String threadNumber) {
-        this.threadNumber = threadNumber;
+        this.tNumber = threadNumber;
     }
 	
 	@Override
 	public void run() {
-		System.out.println(Thread.currentThread().getName() + " Thread Number = " + threadNumber);
+		System.out.println(Thread.currentThread().getName() + " Thread Number = " + tNumber);
 		getNumber();
 		
 	}

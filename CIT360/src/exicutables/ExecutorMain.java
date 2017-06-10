@@ -6,9 +6,8 @@ public class ExecutorMain {
 
     public static void main(String[] args) {
 
-//       Will run 10 at the same time
         ExecutorService newExec = Executors.newFixedThreadPool(16);
-
+//this section creates 16 executors
         for (int i = 0; i < 16; i++) {
             Runnable worker = new MultiThread(" " + i);
             newExec.execute(worker);
