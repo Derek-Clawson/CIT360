@@ -9,30 +9,28 @@ public class Http
         public static void main(String[] args) throws IOException 
         {
 
-            Http http =new Http();
-
-            //Create valid connection
-            URL goog = new URL("http://www.google.com/");
-            URLConnection conn = goog.openConnection();
-            BufferedReader buf = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-            String s = buf.readLine();
+           //this loads the website html code into a variable and displays it
+            URL url = new URL("https://www.lds.org/?lang=eng");
+            URLConnection conn = url.openConnection();
+            BufferedReader buff = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            String s = buff.readLine();
             while (s != null)
             {
                 System.out.println(s);
-                s = buf.readLine();
+                s = buff.readLine();
             }
 
-            //Create invalid connection
+           // this attempts to load a page that doesn't exist and shows the code for the page not found
             try 
             {
-                URL goog2 = new URL("http://www.goog.edu/fakeyfakefake");
-                URLConnection conn2 = goog2.openConnection();
-                BufferedReader buf2 = new BufferedReader(new InputStreamReader(conn2.getInputStream()));
-                String s2 = buf2.readLine();
+                URL url2 = new URL("http://www.lds.org/sldfjsldfj");
+                URLConnection conn2 = url2.openConnection();
+                BufferedReader buff2 = new BufferedReader(new InputStreamReader(conn2.getInputStream()));
+                String s2 = buff2.readLine();
                 while (s2 != null) 
                 {
                     System.out.println(s2);
-                    s2 = buf2.readLine();
+                    s2 = buff2.readLine();
                 }
             }
             catch (Exception e)
@@ -40,55 +38,26 @@ public class Http
                 System.out.print("Failed: Page does not exist\n");
             }
 
-            //Highlight importance of loop to output
+        
+            //this tries a completely fake url
             try 
             {
-                URL goog3 = new URL("http://www.goog.edu/");
-                URLConnection conn3 = goog3.openConnection();
-                BufferedReader buf3 = new BufferedReader(new InputStreamReader(conn3.getInputStream()));
-                String s3 = buf3.readLine();
-                System.out.println(s3);
-            }
-            catch (Exception e)
-            {
-                System.out.print("Failed: No loop\n");
-            }
-
-            //Try fake URL
-            try 
-            {
-                URL goog6 = new URL("www.citstuff.com");
-                URLConnection conn6 = goog6.openConnection();
-                BufferedReader buf6 = new BufferedReader(new InputStreamReader(conn6.getInputStream()));
-                String s6 = buf6.readLine();
-                while (s6 != null) 
+                URL url3 = new URL("www.yomomma.com");
+                URLConnection conn3 = url3.openConnection();
+                BufferedReader buff3 = new BufferedReader(new InputStreamReader(conn3.getInputStream()));
+                String s3 = buff3.readLine();
+                while (s3 != null) 
                 {
-                    System.out.println(s6);
-                    s6 = buf6.readLine();
+                    System.out.println(s3);
+                    s3 = buff3.readLine();
                 }
             }
             catch (Exception e)
             {
-                System.out.print("Failed: Invalid URL\n");
+                System.out.print("Failed: non-existant URL\n");
             }
 
-            //Try empty string as URL parameter
-            try 
-            {
-                URL goog5 = new URL("");
-                URLConnection conn5 = goog5.openConnection();
-                BufferedReader buf5 = new BufferedReader(new InputStreamReader(conn5.getInputStream()));
-                String s5 = buf5.readLine();
-                while (s5 != null) 
-                {
-                    System.out.println(s5);
-                    s5 = buf5.readLine();
-                }
-            }
-            catch (Exception e)
-            {
-                System.out.print("Failed: Empty URL\n");
-            }
+          
 
 
         }
