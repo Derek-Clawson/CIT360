@@ -54,7 +54,7 @@ public class Http
             }
             catch (Exception e)
             {
-                System.out.print("Failed: non-existant URL\n");
+                System.out.print("Failed: Fake URL\n");
             }
 
           
