@@ -5,7 +5,11 @@ import java.io.Serializable;
 
 public class Person implements Serializable {
 
-    private int age;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private int age;
     private String phone;
     private String firstName;
     private String lastName;

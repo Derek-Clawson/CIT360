@@ -43,7 +43,7 @@ public class outputToFile {
             FileInputStream fileIn = new FileInputStream(personFile);
             JSONInputStream jsonIn = new JSONInputStream(fileIn);
 
-            HashMap jsonMap = (HashMap)jsonIn.readObject();
+            HashMap<?, ?> jsonMap = (HashMap<?, ?>)jsonIn.readObject();
             jsonIn.close();
 
             Person fred = new Person();
@@ -101,7 +101,6 @@ public class outputToFile {
             FileInputStream fileIn = new FileInputStream("text.txt");
             JSONInputStream jsonIn = new JSONInputStream(fileIn);
 
-            HashMap jsonMap = (HashMap)jsonIn.readObject();
             jsonIn.close();
 
 
