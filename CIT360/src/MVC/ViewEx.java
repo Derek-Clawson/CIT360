@@ -1,3 +1,5 @@
+package MVC;
+
 
 public class ViewEx {
 
@@ -8,14 +10,12 @@ public class ViewEx {
 
     // Method printText
     public void printText() {
-        System.out.print("P.S. TYPE \"exit\" TO EXIT THIS PROGRAM!!! \nPlease enter your " +
-                "favorite number or type \"exit\": ");
+        System.out.print("\nPlease enter your favorite number or type \"exit\": ");
     }
 
     // Method printText2
     public void printText2() {
-        System.out.print("P.S. TYPE \"exit\" TO EXIT THIS PROGRAM!!! \nIf you want you can " +
-                "enter another favorite number or type \"exit\": ");
+        System.out.print("Please enter another favorite number or type \"exit\": ");
     }
 
     // Method printNum
